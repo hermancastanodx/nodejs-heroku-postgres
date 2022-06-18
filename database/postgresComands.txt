@@ -1,0 +1,36 @@
+Scripts:
+========
+createdb -U postgres archdb
+dropdb -U postgres archdb
+
+psql -U postgres archdb < ./database/ArchitectDBSchema.sql
+
+
+postgres Commands:
+==================
+\q: Exit psql connection
+\c: Connect to a new database
+\dt: List all tables
+\du: List all roles
+\list: List databases
+
+
+Queries:
+========
+SELECT table1.column1, table2.column2...
+FROM table1
+INNER JOIN table2
+ON table1.common_filed = table2.common_field;
+
+SELECT cta_user.username, cta_profile.name, cta_profile.isAdmin
+FROM cta_user
+INNER JOIN cta_profile
+ON cta_user.profileId = cta_profile.Id
+WHERE cta_profile.isAdmin = true;
+
+select cta_solutioncapability.name, cta_solution.name, cta_capability.name 
+from cta_solutioncapability 
+inner join cta_capability 
+on cta_solutioncapability.capabilityid = cta_capability.id
+inner join cta_solution
+on cta_solutioncapability.solutionid = cta_solution.id;

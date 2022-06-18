@@ -1,0 +1,6 @@
+{
+  "jwtPrivateKey": "12345",
+  "db": "mongodb://localhost/vidly",
+  "DATABASE_NAME": "solutionarchitecture",
+  "DATABASE_PW": "password"
+}

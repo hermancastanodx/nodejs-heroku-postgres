@@ -1,0 +1,25 @@
+Setup nodejs project locally:
+=============================
+Create dir with project
+npm init --yes // initiate nodejs project if from scratch
+npm install // install all nodejs dependencies
+git init or clone git repo
+git add . 
+git commit -m "Add cool face API" // commit all changes
+
+Deploy to Heroku:
+=================
+heroku create <app-name>
+git push heroku main
+heroku local web -p 5001
+heroku ps:scale web=1 // Ensure that at least one instance of the app is running
+heroku open // open app in browser
+create Procfile file in root with "web: npm start" 
+heroku run bash // open Heroku console
+
+
+heroku pg:psql
+heroku config
+heroku config:set TIMES=10  
+heroku addons:create heroku-postgresql:hobby-dev  
+eroku open
